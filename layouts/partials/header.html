@@ -1,0 +1,9 @@
+<nav>
+    <span>
+        <img src="{{ .Site.BaseURL }}images/rain_logo.png" alt=""/>
+        {{ range .Site.Sections }}
+        <a href="{{ .Permalink }}">{{ lower .Title }}</a>
+        {{ end }}
+        </ul>
+    </span>
+</nav>

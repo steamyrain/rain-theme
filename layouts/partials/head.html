@@ -4,6 +4,9 @@
     
     <!-- style -->
     <!--link rel="stylesheet" href="{{ .Site.BaseURL }}css/application.css" type="text/css"--> 
+    <!-- 
     {{ $style := resources.Get "/sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" type="text/css"> 
+    -->
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bundle-main.css" type="text/css"> 
 </head>

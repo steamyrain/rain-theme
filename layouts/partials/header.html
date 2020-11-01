@@ -1,8 +1,10 @@
-<nav>
-    <span>
-        <img src="{{ .Site.BaseURL }}images/rain_logo.png" alt=""/>
-        {{ range .Site.Sections }}
-        <a href="{{ .Permalink }}">{{ lower .Title }}</a>
-        {{ end }}
-    </span>
-</nav>
+<header class="mdc-top-app-bar"> 
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"> 
+            <img class="rain-mascot" src="{{ .Site.BaseURL }}images/rain_logo.png" alt=""/>
+            <span class="mdc-top-app-bar__title">
+                {{ .Site.Title }}
+            </span>
+        </section>
+    </div>
+</header>

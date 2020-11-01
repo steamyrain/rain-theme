@@ -1,3 +1,5 @@
+@import '@material/top-app-bar/mdc-top-app-bar';
+
 @font-face {
     font-family: "Press Start 2P";
     font-weight: 400;
@@ -6,30 +8,17 @@
 }
 
 $font-heading: 'Press Start 2P', cursive;
-$onPrimary-color: #ffffff;
 
-h1, h2, h3, h4, h5, h6 {
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+img.rain-mascot {
+    vertical-align: middle;
+}
+
+.mdc-top-app-bar__title {
     font-family: $font-heading;
-    color: $onPrimary-color; 
+    padding-left: 0;
 }
-
-nav {
-    background-color: black;
-    display: inline;
-    width: auto;
-}
-
-nav a {
-    font-family: $font-heading;
-    color: $onPrimary-color; 
-    text-decoration: none;
-}
-
-nav img {
-    vertical-alignment: middle;
-}
-
-#content {
-    background-color: yellow;
-}
-

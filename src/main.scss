@@ -1,4 +1,5 @@
 @import '@material/top-app-bar/mdc-top-app-bar';
+@import '@material/theme';
 
 @font-face {
     font-family: "Press Start 2P";
@@ -21,4 +22,18 @@ img.rain-mascot {
 .mdc-top-app-bar__title {
     font-family: $font-heading;
     padding-left: 0;
+}
+
+.app-bar {
+    position: sticky;
+}
+
+a {
+    &.nav-item {
+        font-family: $font-heading;
+        text-decoration: none;
+        &:hover {
+            @include mdc-theme-prop(color, secondary);
+        }
+    }
 }

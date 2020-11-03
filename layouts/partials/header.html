@@ -1,9 +1,8 @@
 <header class="mdc-top-app-bar mdc-top-app-bar--fixed app-bar"> 
     <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"> 
-            <img class="rain-mascot" src="{{ .Site.BaseURL }}images/rain_logo.png" alt=""/>
             <span class="mdc-top-app-bar__title">
-                {{ .Site.Title }}
+              <img class="rain-mascot" src="{{ .Site.BaseURL }}images/rain_logo.png" alt=""/>{{ upper .Site.Title }}
             </span>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">

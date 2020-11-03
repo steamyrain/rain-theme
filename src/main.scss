@@ -1,5 +1,11 @@
+@use '@material/theme' with (
+    $primary: #fcb8ab,
+    $secondary: #feeae6,
+    $on-primary: #442b2d,
+    $on-secondary: #442b2d,
+);
 @import '@material/top-app-bar/mdc-top-app-bar';
-@import '@material/theme';
+@import '@material/layout-grid/mdc-layout-grid';
 
 @font-face {
     font-family: "Press Start 2P";
@@ -16,24 +22,43 @@ body {
     font-size: 16px;
 }
 
-.mdc-top-app-bar__title {
-    font-family: $font-heading;
-    padding-left: 0;
-        &>img.rain-mascot {
-            vertical-align: middle;
-        }
+.mdc-layout-grid {
+    padding: 0;
+}
+#content {
+    overflow: auto;
+    & #about{
+        text-align: center;
+        @include mdc-theme-prop(background-color,secondary);
+    }
 }
 
-.app-bar {
+.mdc-top-app-bar {
     position: sticky;
+    &__title {
+        font-family: $font-heading;
+        padding-left: 0;
+            &>img.rain-mascot {
+                vertical-align: middle;
+            }
+    }
 }
 
 a {
     &.nav-item {
         font-family: $font-heading;
         text-decoration: none;
+        padding-inline-end: inherit;
         &:hover {
-            @include mdc-theme-prop(color, secondary);
+            @include mdc-theme-prop(color,secondary);
+        }
+    }
+    &.home-url {
+        font-family: $font-heading;
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            @include mdc-theme-prop(color,secondary);
         }
     }
 }

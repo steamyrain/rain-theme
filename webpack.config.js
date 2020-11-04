@@ -57,4 +57,12 @@ module.exports = [
             ],
         },
     },
+    {        
+        entry: "./src/main.js",
+        output: {
+            path: path.resolve(__dirname,"static/js"),
+            // This is necessary for webpack to compile, but we won't reference it.
+            filename: "bundle-main.js",
+        },
+    },
 ];

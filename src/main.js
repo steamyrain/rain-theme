@@ -1,4 +1,5 @@
 import {MDCTopAppBar} from '@material/top-app-bar';
 
-const topAppBarElement = document.querySelector('.mdc-top-app-bar');
-const topAppBar = new MDCTopAppBar(topAppBarElement);
+document.addEventListener("DOMContentLoaded", function() {
+    const content = document.getElementById("content")
+});

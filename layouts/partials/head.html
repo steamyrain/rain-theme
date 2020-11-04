@@ -1,12 +1,7 @@
 <head>
     <meta charset="utf-8">
     <title>raincoat</title> 
-    
-    <!-- style -->
-    <!--link rel="stylesheet" href="{{ .Site.BaseURL }}css/application.css" type="text/css"--> 
-    <!-- 
-    {{ $style := resources.Get "/sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" type="text/css"> 
-    -->
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bundle-main.css" type="text/css"> 
+    <meta name="viewpot" content="width=device-width, initial-scale=1.0">
+    <script charset="utf-8" src="{{ .Site.BaseURL }}js/bundle-main.js"></script>
 </head>

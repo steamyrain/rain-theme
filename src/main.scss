@@ -14,7 +14,28 @@
     src: url('/fonts/PressStart2P-Regular.ttf');
 }
 
+// font 
 $font-heading: 'Press Start 2P', cursive;
+
+// breakpoints
+$xs: 0px; 
+$sm-1: 599px;
+$sm: 600px;
+$md: 960px;
+$lg: 1280px;
+$xl: 1920px;
+
+@media only screen and (max-width: $sm-1) {
+    #content {
+        padding-top: 56px;
+    }
+}
+
+@media only screen and (min-width: $sm) {
+    #content {
+        padding-top: 64px;
+    }
+}
 
 body {
     height: 100vh;
@@ -25,16 +46,20 @@ body {
 .mdc-layout-grid {
     padding: 0;
 }
+
 #content {
     overflow: auto;
+    display: flex;
+    flex-direction: column;
     & #about{
         text-align: center;
+        flex-basis: 100%;
         @include mdc-theme-prop(background-color,secondary);
     }
 }
 
 .mdc-top-app-bar {
-    position: sticky;
+    top: 0;
     &__title {
         font-family: $font-heading;
         padding-left: 0;

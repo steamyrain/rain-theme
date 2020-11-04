@@ -4,6 +4,7 @@
     $on-primary: #442b2d,
     $on-secondary: #442b2d,
 );
+@use '@material/button';
 @import '@material/top-app-bar/mdc-top-app-bar';
 @import '@material/layout-grid/mdc-layout-grid';
 
@@ -30,12 +31,20 @@ $xl: 1920px;
 @media only screen and (max-width: $sm-1) {
     #content {
         padding-top: 56px;
+        & #about{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
     }
 }
 
 @media only screen and (min-width: $sm) {
     #content {
         padding-top: 64px;
+        & #about{
+            padding-top: 18px;
+            padding-bottom: 18px;
+        }
     }
 }
 
@@ -90,3 +99,5 @@ a {
         }
     }
 }
+
+@include button.core-styles;

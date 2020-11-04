@@ -25,6 +25,8 @@ $md: 960px;
 $lg: 1280px;
 $xl: 1920px;
 
+// Had to do media query because the only option left was using @material-ui/core/styles
+// which require react which unnecessary.
 @media only screen and (max-width: $sm-1) {
     #content {
         padding-top: 56px;
@@ -37,6 +39,7 @@ $xl: 1920px;
     }
 }
 
+// style
 body {
     height: 100vh;
     margin: 0;

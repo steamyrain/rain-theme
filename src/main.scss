@@ -61,10 +61,6 @@ body {
     font-size: 16px;
 }
 
-.mdc-layout-grid {
-    padding: 0;
-}
-
 #content {
     overflow: auto;
     display: flex;
@@ -72,7 +68,7 @@ body {
     & #about{
         text-align: center;
         flex-basis: 100%;
-        @include theme.property(background-color,$primary); 
+        @include theme.property(background-color,$secondary); 
         &>p {
             font-family: $font-heading;
             font-size: 16px;
@@ -81,7 +77,17 @@ body {
 }
 
 .mdc-top-app-bar {
-    @include elevation.elevation(4);
+    &--fixed::before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        @include elevation.elevation(4);
+        opacity: var(--o);
+        transition: opacity 200ms ease-in;
+    }
     &__title {
         font-family: $font-heading;
         padding-left: 0;
@@ -97,7 +103,7 @@ a {
         text-decoration: none;
         padding-inline-end: inherit;
         &:hover {
-            //@include mdc-theme-prop(color,secondary);
+            @include theme.property(color,$secondary);
         }
     }
     &.home-url {
@@ -105,7 +111,7 @@ a {
         text-decoration: none;
         color: inherit;
         &:hover {
-            //@include mdc-theme-prop(color,secondary);
+            @include theme.property(color,$secondary);
         }
     }
 }

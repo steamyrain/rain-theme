@@ -5,7 +5,9 @@
     $on-secondary: #442b2d,
 );
 @use '@material/button';
-@import '@material/top-app-bar/mdc-top-app-bar';
+@use '@material/top-app-bar/mdc-top-app-bar';
+@use "@material/elevation/mdc-elevation";
+@use '@material/elevation';
 @import '@material/layout-grid/mdc-layout-grid';
 
 @font-face {
@@ -14,6 +16,12 @@
     font-style: normal;
     src: url('/fonts/PressStart2P-Regular.ttf');
 }
+
+// theme colors 
+$primary: #fcb8ab;
+$secondary: #feeae6;
+$on-primary: #442b2d;
+$on-secondary: #442b2d;
 
 // font 
 $font-heading: 'Press Start 2P', cursive;
@@ -30,7 +38,6 @@ $xl: 1920px;
 // which require react which unnecessary.
 @media only screen and (max-width: $sm-1) {
     #content {
-        padding-top: 56px;
         & #about{
             padding-top: 10px;
             padding-bottom: 10px;
@@ -40,7 +47,6 @@ $xl: 1920px;
 
 @media only screen and (min-width: $sm) {
     #content {
-        padding-top: 64px;
         & #about{
             padding-top: 18px;
             padding-bottom: 18px;
@@ -66,12 +72,16 @@ body {
     & #about{
         text-align: center;
         flex-basis: 100%;
-        @include mdc-theme-prop(background-color,secondary);
+        @include theme.property(background-color,$primary); 
+        &>p {
+            font-family: $font-heading;
+            font-size: 16px;
+        }
     }
 }
 
 .mdc-top-app-bar {
-    top: 0;
+    @include elevation.elevation(4);
     &__title {
         font-family: $font-heading;
         padding-left: 0;
@@ -87,7 +97,7 @@ a {
         text-decoration: none;
         padding-inline-end: inherit;
         &:hover {
-            @include mdc-theme-prop(color,secondary);
+            //@include mdc-theme-prop(color,secondary);
         }
     }
     &.home-url {
@@ -95,7 +105,7 @@ a {
         text-decoration: none;
         color: inherit;
         &:hover {
-            @include mdc-theme-prop(color,secondary);
+            //@include mdc-theme-prop(color,secondary);
         }
     }
 }

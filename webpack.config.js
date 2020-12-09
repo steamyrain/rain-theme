@@ -39,21 +39,6 @@ module.exports = [
                         },
                     ],
                 },
-                {
-                    test: /\.ttf$/,
-                    use: [
-                        {
-                            loader: 'file-loader',
-                            options: {
-                                name: '[name].[ext]',
-                                outputPath: '../fonts'
-                            },
-                        },
-                        {
-                            loader: 'extract-loader'
-                        },
-                    ],
-                },
             ],
         },
     },
@@ -61,8 +46,23 @@ module.exports = [
         entry: "./src/main.js",
         output: {
             path: path.resolve(__dirname,"static/js"),
-            // This is necessary for webpack to compile, but we won't reference it.
             filename: "bundle-main.js",
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.pdf$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                name: '[name].[ext]',
+                                outputPath: '../docs',
+                            },
+                        },
+                    ],
+                },
+            ],
         },
     },
 ];

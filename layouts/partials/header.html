@@ -6,9 +6,9 @@
                     <img class="rain-mascot" src="{{ .Site.BaseURL }}images/rain_logo.png" alt=""/><a class="home-url" href="{{ .Site.BaseURL }}">{{ upper .Site.Title }}</a>
                 </span>
             </section>
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-                <a class="mdc-top-app-bar__action-item nav-item" href="#content">about</a>
-                <a class="mdc-top-app-bar__action-item nav-item" href="#projects">projects</a>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <a class="nav-item" href="#content" aria-label="About">about</a>
+                <a class="nav-item" href="#projects" aria-label="Projects">projects</a>
             </section>
         </div>
     </header>
@@ -20,9 +20,9 @@
                     <img class="rain-mascot" src="{{ .Site.BaseURL }}images/rain_logo.png" alt=""/><a class="home-url" href="{{ .Site.BaseURL }}">{{ upper .Site.Title }}</a>
                 </span>
             </section>
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
                 {{ range .Site.Sections }}
-                    <a class="mdc-top-app-bar__action-item nav-item" href="{{ .Permalink }}"> {{ lower .Title }}</a>
+                    <a class="mdc-top-app-bar__action-item" href="{{ .Permalink }}"> {{ lower .Title }}</a>
                 {{ end }}
             </section>
         </div>

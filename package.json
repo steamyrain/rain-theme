@@ -18,11 +18,13 @@
   },
   "dependencies": {
     "@material/button": "^8.0.0",
+    "@material/card": "^8.0.0",
     "@material/elevation": "^8.0.0",
     "@material/layout-grid": "^7.0.0",
     "@material/ripple": "^8.0.0",
     "@material/theme": "^7.0.0",
-    "@material/top-app-bar": "^7.0.0"
+    "@material/top-app-bar": "^7.0.0",
+    "@material/typography": "^8.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
